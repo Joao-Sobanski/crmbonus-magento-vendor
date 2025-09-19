@@ -1,0 +1,10 @@
+<?xml version="1.0"?>
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework/Event/etc/events.xsd">
+    <event name="checkout_cart_product_add_after">
+        <observer name="vendor_cartwebhook_observer" instance="Vendor\CartWebhook\Observer\AddToCartObserver" />
+    </event>
+     <event name="catalog_product_save_after">
+        <observer name="vendor_productwebhook_observer" instance="Vendor\CartWebhook\Observer\ProductSaveObserver" />
+    </event>
+</config>
+
